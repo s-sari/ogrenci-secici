@@ -1325,7 +1325,7 @@ body{padding:0 0 72px}
     <div style="padding:4px 20px 12px;border-bottom:1.5px solid var(--bd);display:flex;align-items:center;justify-content:space-between">
       <div>
         <div style="font-size:18px;font-weight:900;color:var(--t1);letter-spacing:-.3px">🎉 Yenilikler</div>
-        <div style="font-family:JetBrains Mono,monospace;font-size:10px;color:var(--t3);margin-top:2px">S-Katılım <span style="background:var(--ac);color:#fff;padding:1px 6px;border-radius:4px;font-size:9px">Pro 2.0.29</span></div>
+        <div style="font-family:JetBrains Mono,monospace;font-size:10px;color:var(--t3);margin-top:2px">S-Katılım <span style="background:var(--ac);color:#fff;padding:1px 6px;border-radius:4px;font-size:9px">Pro 2.1.0</span></div>
       </div>
     </div>
     <!-- Liste -->
@@ -5288,29 +5288,16 @@ function profilModalGuncelle(){
 
 var AKTIF_PROFIL_KEY = 'profil_varsayilan';
 
-/* ===================== OTOMATİK VERSİYON YÖNETİMİ ===================== */
-var APP_VER_BASE = '2.0';
-var APP_VER_BUILD = 27; // başlangıç build numarası
-(function(){
-  try{
-    var saved = localStorage.getItem('_appBuild');
-    if(saved !== null) APP_VER_BUILD = parseInt(saved) || 1;
-  }catch(e){}
-})();
-function appVerStr(){ return APP_VER_BASE+'.'+String(APP_VER_BUILD).padStart(2,'0'); }
-function appVerYukselt(){
-  APP_VER_BUILD++;
-  try{ localStorage.setItem('_appBuild', APP_VER_BUILD); }catch(e){}
-  appVerGuncelle();
-  return appVerStr();
-}
+/* ===================== VERSİYON ===================== */
+var APP_VER_SABIT = '2.1.0';
+function appVerStr(){ return APP_VER_SABIT; }
+function appVerYukselt(){ return APP_VER_SABIT; }
 function appVerGuncelle(){
-  var v = appVerStr();
   var els = document.querySelectorAll('.ver, .footer-ver');
-  els.forEach(function(el){ el.textContent = 'Pro '+v; });
-  document.title = 'S-Katılım Pro '+v;
+  els.forEach(function(el){ el.textContent = 'Pro '+APP_VER_SABIT; });
+  document.title = 'S-Katılım Pro '+APP_VER_SABIT;
 }
-appVerGuncelle(); // Versiyon göstergesini güncelle (fonksiyon tanımından sonra)
+appVerGuncelle();
 
 /* dup kaldırıldı */
 
