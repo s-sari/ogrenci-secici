@@ -48,7 +48,7 @@
 <meta name="apple-mobile-web-app-title" content="S-Katılım">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#4f6ef7">
-<title>S-Katılım Pro 2.0.29</title>
+<title>S-Katılım Pro 2.1.0</title>
 <!-- ═══════ PWA: Web App Manifest + İkonlar ═══════ -->
 <!-- Apple Touch Icon (iOS Ana Ekrana Ekle) -->
 <link rel="apple-touch-icon" sizes="192x192" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAENElEQVR42u3dwXHUWhRFUUdBWmRCCORDhAxNMWFGUcYt6d6316lSAKj3epI/H/fbm5mZmZmZmZmZmZmZmV2yr99+vrsLdkzMd13utmVih8IED4QJHggTPQwmfBBM9DCY8EEw4YNgwgfBhA+C8F0gCN8FgvhdEAjfBYL4XRCI3wWB8F0giH/M9XsQ2FHxXzkIhJ+J/SQUaj4k/g2DQPy56LdgUPei+E8aBOLPRT8Zg9qHxV8cBOJ/t3cIivHbHAjiFz8E4hd+HYL4xQ8BAMIvQxC/+CEQv/ghEL/w4xAAEH8agfjFD4H4xQ+B+MUPAQDi7yIQv/ghEL/4IYgDsDYC8RsEABgA4jcIGgAMgvEAxG9pBABYFoD4LY1A/PYUAqe/eQo4/e2V+/Lj+5/LU0D8uej/dkEAQDb+VyIAQPwr45+MwOlvt8T/KgTrnwLi78Y/FYHT326LP/0UEL/40z8LAABAFoDXH/Gn/5Oo+MU//S/GALDL4wdA/AC8cCsAOP3Fv+V/kgPALosfAPGL/4IBYNn4xwPw+gPA1Rv9GgSA0x8A8Yt/EQIAxL8qfgAsHf9YAN7//dC7EcDLEGwGMOWDdfoDcGv8Uz9g8S98DdoEYNuHLX4ARoQBwJz7AMBDUTj9AVgL4JQPvx4/AA+HIX4A0gCmIqjED8CQQPzQC0AawKQ4Sqc/AE7IdPwACCUd/zgAlb8DmBhMMX4IIEif/l6BBgO4K55y/ADEnwL1+AEIIxA/AGkE4gcgi8DpD0AWgfgByCIQPwBZBOIHII1A/AAcBeAj8Tn9owAgEP9d8QMw8FVI/AsBnPi7QZ9CIP5lrz8n/3LcuxE4/QEY98tx70IgfgCyCMS//P2/8CvSxQ9A/ksyxO/1J/8tMQAAkP6mGPF7/cl/VZL4Ach/WZ74vf7kvzAPAKd//hsjxQ/ApQAgEP8qANXvDRa/0z//xdniByD7GvQEAvEPBVB+CtyFwOk/OH5PAfGnT39PAf+yK336ewpcg0D8AKz7MAEIA4DgdQjEvzD+qwDUEIh/MQBPgc8hKO3I+D0F/h+B+A8BAMHHEYj/oPgB+DeI8hIAILB0/FcCgED8KwBAYOn4AbA8AAgsHf/VACDoxr8GAATiT8cPgfjz8d8BAIJG/GsBQCD+dPwQiD8fPwTiz8d/FwAIzon/OAB3IgBhd/hHxg+B+PPxQyD+fPx3AwBhR/gpABCIPx3/kwhAmBd+Mn4IxJ+P/2kEIDwbvviHIKhCePqeq34YggqECfdZ7YMRnIhh0n1V+SIE2yFMu5fqXopgE4ap907VhyCYBmLDfVLz4RDuQrHtXqg3iuAjWE79s6kWguylVhCEbxCI3yAQv4EgfINA/AaC8A0E4RsIwjcQhG8gCN9AEL7BIHoDQfgGg+gNCMEbEII3KMRuZ6JxF8zMzMzMzMzMzMzsov0C3hRS3hsgLFUAAAAASUVORK5CYII=">
@@ -166,8 +166,8 @@ body{padding:0 0 72px}
   .ana-sag{grid-column:2;display:flex;flex-direction:column;gap:10px}
   /* sol sütun: seçim modu, animasyon, sınıflar, hızlı puan */
   /* sağ sütun: arama, rcard, sec butonu, geri sayım */
-  .bottom-nav{max-width:1200px;left:50%;transform:translateX(-50%);border-radius:var(--r) var(--r) 0 0;border:1.5px solid var(--bd);border-bottom:none}
-  .header{max-width:1200px;left:50%;transform:translateX(-50%);border-radius:0 0 var(--r) var(--r);border-left:1.5px solid var(--bd);border-right:1.5px solid var(--bd)}
+  .bottom-nav{max-width:1200px;left:50%;transform:translateX(-50%);border-radius:var(--r) var(--r) 0 0;border:1.5px solid var(--bd);border-bottom:none;right:auto;width:1200px}
+  .header{max-width:1200px;left:50%;transform:translateX(-50%);border-radius:0 0 var(--r) var(--r);border-left:1.5px solid var(--bd);border-right:1.5px solid var(--bd);right:auto;width:1200px}
 }
 
 /* ── HEADER ── */
@@ -675,7 +675,7 @@ body{padding:0 0 72px}
   <!-- BAŞLIK -->
   <div class="header">
     <div class="hdr-left" style="display:flex;flex-direction:column">
-      <div class="hdr-h1">S-Katılım <span class="ver">Pro 2.0.29</span></div>
+      <div class="hdr-h1">S-Katılım <span class="ver">Pro 2.1.0</span></div>
       <div id="aktifProfilGoster" onclick="profilModalAc()" title="Profil değiştir"
         style="display:inline-flex;align-items:center;gap:5px;margin-top:3px;padding:3px 9px 3px 5px;background:var(--ac2);border:1.5px solid var(--ac3);border-radius:20px;cursor:pointer;transition:all .15s;user-select:none;max-width:160px;overflow:hidden">
         <span style="font-size:14px;flex-shrink:0">👨‍🏫</span>
@@ -1372,7 +1372,7 @@ body{padding:0 0 72px}
       </div>
     </div>
     <div class="nav-footer-row">
-      S-Katılım <span class="footer-ver">Pro 2.0.29</span> &nbsp;©sebasmobil&nbsp;
+      S-Katılım <span class="footer-ver">Pro 2.1.0</span> &nbsp;©sebasmobil&nbsp;
       <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL V3.0</a>
       &nbsp;2026
     </div>
@@ -3757,12 +3757,20 @@ function listeyiGoster(){
     h+='<span class="smeta">'+(s.numara||'—')+'</span>';
     h+='<span style="font-weight:700">'+s.ad+'</span>';
     h+='</div>';
+    // Düzenle butonu
+    h+='<button class="btn-del" data-editidx="'+s._i+'" title="Öğrenciyi düzenle" style="color:var(--ac);font-size:15px">✏️</button>';
     // Sil butonu
     h+='<button class="btn-del" data-idx="'+s._i+'" title="Öğrenciyi sil">×</button>';
     h+='</div>';
   });
   liste.innerHTML=h;
-  liste.querySelectorAll('.btn-del').forEach(function(b){
+  liste.querySelectorAll('[data-editidx]').forEach(function(b){
+    b.addEventListener('click',function(e){
+      e.stopPropagation();
+      ogrenciDuzenleAc(parseInt(this.dataset.editidx));
+    });
+  });
+  liste.querySelectorAll('.btn-del[data-idx]').forEach(function(b){
     b.addEventListener('click',function(e){
       e.stopPropagation();
       ogrenciSil(parseInt(this.dataset.idx));
@@ -3888,6 +3896,96 @@ function ogrenciEkle(){
   kaydet(); siniflariOlustur(); baslikGuncelle(); listeyiGoster(); srchPuanGoster();
   if(seciliSinif===sinif){gecmisiGoster();kalanlariGoster();}
   bildir(ad+' eklendi');
+}
+
+/* ===================== ÖĞRENCİ DÜZENLEME ===================== */
+var _duzenleIdx = null;
+
+function ogrenciDuzenleAc(idx){
+  if(!ogr[idx]) return;
+  _duzenleIdx = idx;
+  var s = ogr[idx];
+  var sinifParts = (s.sinif||'').split('-');
+  var sinifNo = sinifParts[0] || '';
+  var sube = sinifParts.slice(1).join('-') || '';
+
+  // Mevcut modal varsa kaldır
+  var eskiOv = document.getElementById('_duzenleOverlay');
+  if(eskiOv) eskiOv.remove();
+
+  var ov = document.createElement('div');
+  ov.id = '_duzenleOverlay';
+  ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9900;display:flex;align-items:center;justify-content:center;padding:16px';
+  ov.innerHTML =
+    '<div style="background:var(--bg);border:1.5px solid var(--bd);border-radius:var(--r);padding:24px;width:100%;max-width:440px;box-shadow:var(--shadow2)">' +
+      '<div style="font-size:17px;font-weight:900;color:var(--t1);margin-bottom:4px">✏️ Öğrenci Düzenle</div>' +
+      '<div style="font-size:11px;font-weight:700;color:var(--t2);font-family:JetBrains Mono,monospace;margin-bottom:18px">Bilgileri değiştirin ve kaydedin</div>' +
+      '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">' +
+        '<div style="display:flex;flex-direction:column;gap:4px;flex:1;min-width:60px">' +
+          '<span style="font-family:JetBrains Mono,monospace;font-size:10px;font-weight:700;color:var(--t2);letter-spacing:1px;text-transform:uppercase">Okul No</span>' +
+          '<input id="_duzenleNo" class="inp" value="'+_esc(s.numara||'')+'" placeholder="101" inputmode="numeric">' +
+        '</div>' +
+        '<div style="display:flex;flex-direction:column;gap:4px;flex:1;min-width:60px">' +
+          '<span style="font-family:JetBrains Mono,monospace;font-size:10px;font-weight:700;color:var(--t2);letter-spacing:1px;text-transform:uppercase">Sınıf</span>' +
+          '<input id="_duzenleSinif" class="inp" value="'+_esc(sinifNo)+'" placeholder="5">' +
+        '</div>' +
+        '<div style="display:flex;flex-direction:column;gap:4px;flex:1;min-width:60px">' +
+          '<span style="font-family:JetBrains Mono,monospace;font-size:10px;font-weight:700;color:var(--t2);letter-spacing:1px;text-transform:uppercase">Şube</span>' +
+          '<input id="_duzenleSube" class="inp" value="'+_esc(sube)+'" placeholder="A">' +
+        '</div>' +
+        '<div style="display:flex;flex-direction:column;gap:4px;flex:2;min-width:140px">' +
+          '<span style="font-family:JetBrains Mono,monospace;font-size:10px;font-weight:700;color:var(--t2);letter-spacing:1px;text-transform:uppercase">Ad Soyad</span>' +
+          '<input id="_duzenleAd" class="inp" value="'+_esc(s.ad||'')+'" placeholder="Ad Soyad">' +
+        '</div>' +
+      '</div>' +
+      '<div style="display:flex;gap:8px;justify-content:flex-end;margin-top:4px">' +
+        '<button class="btn-s" id="_duzenleIptal">İptal</button>' +
+        '<button class="btn-s primary" id="_duzenleKaydet">💾 Kaydet</button>' +
+      '</div>' +
+    '</div>';
+
+  document.body.appendChild(ov);
+
+  document.getElementById('_duzenleIptal').onclick = function(){ ov.remove(); };
+  document.getElementById('_duzenleKaydet').onclick = ogrenciDuzenleKaydet;
+  ov.addEventListener('click', function(e){ if(e.target===ov) ov.remove(); });
+
+  // Enter ile kaydet
+  ['_duzenleNo','_duzenleSinif','_duzenleSube','_duzenleAd'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.addEventListener('keydown', function(e){ if(e.key==='Enter') ogrenciDuzenleKaydet(); });
+  });
+  setTimeout(function(){ var adEl=document.getElementById('_duzenleAd'); if(adEl){ adEl.focus(); adEl.select(); }}, 80);
+}
+
+function _esc(s){ return (s+'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function ogrenciDuzenleKaydet(){
+  if(_duzenleIdx===null || !ogr[_duzenleIdx]) return;
+  var no = (document.getElementById('_duzenleNo').value||'').trim();
+  var sv = (document.getElementById('_duzenleSinif').value||'').trim();
+  var sb = (document.getElementById('_duzenleSube').value||'').trim();
+  var ad = (document.getElementById('_duzenleAd').value||'').trim();
+  if(!sv||!sb||!ad){ bildir('Sınıf, Şube ve Ad Soyad zorunlu'); return; }
+  var sinif = sv+'-'+sb;
+  // Çakışan numara kontrolü (başka öğrencide aynı numara varsa uyar)
+  if(no){
+    for(var j=0;j<ogr.length;j++){
+      if(j!==_duzenleIdx && ogr[j].numara===no){
+        if(!confirm(no+' no başka öğrencide de var: '+ogr[j].ad+'\nYine de kaydet?')) return;
+        break;
+      }
+    }
+  }
+  ogr[_duzenleIdx] = {sinif:sinif, numara:no, ad:ad};
+  kaydet();
+  var ov = document.getElementById('_duzenleOverlay');
+  if(ov) ov.remove();
+  siniflariOlustur(); baslikGuncelle(); listeyiGoster(); srchPuanGoster();
+  hizliPuanGoster();
+  if(seciliSinif){ gecmisiGoster(); kalanlariGoster(); }
+  bildir('✅ '+ad+' güncellendi');
+  _duzenleIdx = null;
 }
 
 function ogrenciSil(idx){
@@ -4520,8 +4618,11 @@ yedekListesiGoster();
 
 
 /* ===================== YENİLİKLER MODALI ===================== */
-var YENILIK_VER = 'Pro2.0.29';
+var YENILIK_VER = 'Pro2.1.0';
 var YENILIKLER = [
+  { emoji:'✏️', baslik:'Öğrenci Düzenleme (2.1.0)', aciklama:'Veri Yönetimi > Kayıtlı Öğrenciler listesinde her öğrencinin yanındaki ✏️ butonuna tıklayarak sınıf, şube, okul no ve ad soyad düzenlenebilir.' },
+  { emoji:'🖥️', baslik:'Projektör kapanma düzeltmesi (2.1.0)', aciklama:'Masaüstü bilgisayarda projektör kapatma butonuna basınca ekranın açılıp kapanma döngüsüne girme sorunu giderildi.' },
+  { emoji:'📐', baslik:'Geniş ekran menü düzeltmesi (2.1.0)', aciklama:'Masaüstünde pencere genişleyince alt navigasyon menüsünün kaybolması sorunu giderildi.' },
   { emoji:'👥', baslik:'Coklu ogretmen profili', aciklama:'Baslik cubugundaki profil adina tiklayarak profiller arasinda gecis yapin. Her profil kendi ogrenci ve puan verisini bagimsiz saklar.' },
   { emoji:'➕', baslik:'Profil ekle ve sil', aciklama:'Yeni Profil Ekle butonu ile ogretmen profili olusturun, profil adini duzenleyin veya silin.' },
   { emoji:'🔄', baslik:'Anlik profil gecisi', aciklama:'Profil degisince tum veri (ogrenciler, puanlar, gecmis, tercihler) aninda o profile ait veriye gecer.' },
@@ -4658,14 +4759,13 @@ function projektorAc(){
     document.getElementById('projPuan').style.display='none';
   }
   overlay.classList.add('acik');
-  // Tam ekran dene
-  try{ if(document.documentElement.requestFullscreen) document.documentElement.requestFullscreen(); }catch(e){}
+  // Tam ekran API'yi çağırma — sadece tarayıcı içinde overlay olarak açılsın
 }
 function projektorKapat(){
   var overlay=document.getElementById('projOverlay');
   if(overlay) overlay.classList.remove('acik');
-  try{ if(document.exitFullscreen && document.fullscreenElement) document.exitFullscreen(); }catch(e){}
 }
+// fullscreenchange artık kullanılmıyor ama ESC klavye kısayolu hâlâ çalışsın
 function projektorGuncelle(){
   if(!document.getElementById('projOverlay').classList.contains('acik')) return;
   projektorAc();
